@@ -169,7 +169,7 @@ class SettingsEditText extends Component {
       iosDialogInputType, value,
     } = this.props;
     if (Platform.OS === 'ios') {
-      Alert.prompt(
+      Alert.alert(
         title,
         dialogDescription,
         [
