@@ -169,11 +169,15 @@ class SettingsEditText extends Component {
       iosDialogInputType, value,
     } = this.props;
     if (Platform.OS === 'ios') {
-      Alert.alert(
+      Alert.prompt(
         title,
         dialogDescription,
         [
-          { text: negativeButtonTitle, onPress: () => {}, style: 'cancel' },
+          {
+            text: negativeButtonTitle,
+            onPress: () => {},
+            style: 'cancel',
+          },
           {
             text: positiveButtonTitle,
             onPress: this.onValueChange,
